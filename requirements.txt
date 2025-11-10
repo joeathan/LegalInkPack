@@ -1,0 +1,2 @@
+# Core dependencies for LegalInkPack
+# Add project dependencies here
