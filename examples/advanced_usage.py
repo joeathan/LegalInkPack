@@ -28,8 +28,7 @@ from legalinkpack.utils import validate_input
 
 # Setup logging
 logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
 
@@ -109,7 +108,7 @@ def main():
     # Demonstrate error handling
     print("\n5. Testing error handling...")
     try:
-        invalid_cs = CounterSurveillance(config="invalid_config")
+        CounterSurveillance(config="invalid_config")  # type: ignore
     except ValueError as e:
         print(f"   ✓ Caught expected error: {e}")
 
